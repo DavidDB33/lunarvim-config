@@ -13,7 +13,6 @@ lvim.keys.normal_mode['<C-A-l>'] = '<cmd>BufferLineMoveNext<cr>'
 lvim.keys.normal_mode['<C-A-h>'] = '<cmd>BufferLineMovePrev<cr>'
 
 lvim.builtin.which_key.mappings["lR"] = {'<cmd>LspRestart<cr>', 'Restart LSP'}
---lvim.builtin.which_key.mappings.l.R
 
 lvim.plugins = {
     { "github/copilot.vim" }
