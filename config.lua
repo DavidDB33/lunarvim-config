@@ -12,12 +12,21 @@ lvim.keys.normal_mode['<C-A-j>'] = '<cmd>BufferLineCyclePrev<cr>'
 lvim.keys.normal_mode['<C-A-l>'] = '<cmd>BufferLineMoveNext<cr>'
 lvim.keys.normal_mode['<C-A-h>'] = '<cmd>BufferLineMovePrev<cr>'
 
+-- LSP commands
 lvim.builtin.which_key.mappings["lR"] = {'<cmd>LspRestart<cr>', 'Restart LSP'}
 
+-- Plugin load
 lvim.plugins = {
     { "github/copilot.vim" },
     { "hrsh7th/nvim-cmp" },
     { "neoclide/coc.nvim", branch = "release" },
-    { "dccsillag/magma-nvim"},
+    { "vim-test/vim-test" }, -- To execute tests. Check out vim-test config below
+    { "dccsillag/magma-nvim"} -- To edit jupyter notebooks
 }
-lvim.builtin.which_key.mappings['C'] = {'<cmd>Copilot panel<cr>', 'Copilot hits'}
+
+-- Copilot commands
+lvim.builtin.which_key.mappings["C"] = {'<cmd>Copilot panel<cr>', 'Copilot hints'}
+
+-- Vim-test config. Use space + t for testing
+lvim.builtin.which_key.mappings["t"] = {'<cmd>TestSuit<cr>', 'Execute tests'}
+vim.g['test#enabled_runners'] = {'python#pytest'}
