@@ -20,8 +20,7 @@ lvim.plugins = {
     { "github/copilot.vim" },
     { "hrsh7th/nvim-cmp" },
     { "neoclide/coc.nvim", branch = "release" },
-    { "vim-test/vim-test" }, -- To execute tests. Check out vim-test config below
-    { "dccsillag/magma-nvim"} -- To edit jupyter notebooks
+    { "vim-test/vim-test" } -- To execute tests. Check out vim-test config below
 }
 
 -- Copilot commands
