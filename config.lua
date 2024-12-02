@@ -6,11 +6,13 @@
 --vim.keys.set('n', '<F7>', '<cmd>bN<cr>')
 --vim.keys.set('n', '<C-A-k>', '<cmd>bn<cr>')
 --vim.keys.set('n', '<C-A-j>', '<cmd>bN<cr>')
+
 lvim.builtin.telescope.defaults.initial_mode = "normal"
 lvim.keys.normal_mode['<C-A-k>'] = '<cmd>BufferLineCycleNext<cr>'
 lvim.keys.normal_mode['<C-A-j>'] = '<cmd>BufferLineCyclePrev<cr>'
 lvim.keys.normal_mode['<C-A-l>'] = '<cmd>BufferLineMoveNext<cr>'
 lvim.keys.normal_mode['<C-A-h>'] = '<cmd>BufferLineMovePrev<cr>'
+lvim.keys.normal_mode['<C-A-w>'] = '<cmd>set invwrap<cr>'
 
 -- LSP commands
 lvim.builtin.which_key.mappings["lR"] = {'<cmd>LspRestart<cr>', 'Restart LSP'}
