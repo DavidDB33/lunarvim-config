@@ -19,10 +19,25 @@ lvim.builtin.which_key.mappings["lR"] = {'<cmd>LspRestart<cr>', 'Restart LSP'}
 
 -- Plugin load
 lvim.plugins = {
-    { "github/copilot.vim" },
-    { "hrsh7th/nvim-cmp" },
-    { "neoclide/coc.nvim", branch = "release" },
-    { "vim-test/vim-test" } -- To execute tests. Check out vim-test config below
+--  { "github/copilot.vim" }, -- Monthly sub, easy to spent
+  { "sainnhe/everforest" },
+  { "f-person/git-blame.nvim" }, -- Git blame
+  { "hrsh7th/nvim-cmp" },
+  { "neoclide/coc.nvim", branch = "release" }, -- Deactivate if do not want to mess with copilot
+  { "vim-test/vim-test" }, -- To execute tests. Check out vim-test config below
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = { -- Check https://github.com/folke/todo-comments.nvim/tree/main?tab=readme-ov-file#%EF%B8%8F-configuration
+      highlight = {
+        keyword = "bg",
+        after = ""
+      }
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  }
 }
 
 -- Copilot commands
